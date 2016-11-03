@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
         body: "Body!"
       }
     ]
-    render "alt_index"
+    render "index"
   end
 
   def my_sum(a, b)
