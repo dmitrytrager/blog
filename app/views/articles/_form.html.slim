@@ -1,0 +1,4 @@
+= simple_form_for @article do |f| 
+	= f.input :title, label: 'Article title', error: 'Username is mandatory, please specify one' 
+  	= f.input :body, label: 'Article description'
+  	= f.button :submit 
