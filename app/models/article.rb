@@ -2,8 +2,8 @@ class Article < ApplicationRecord
   belongs_to :user
   has_many :comments
 
-  validates :title, presence: true
-  validates :user_id, numericality: true, uniqueness: true
+  validates :title, presence: true, uniqueness: true
+  validates :user_id, numericality: true
 
   before_validation :fill_title
 
