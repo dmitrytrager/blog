@@ -7,5 +7,5 @@
     <%= form.label :body %>
     <%= form.text_field :body %>
   </p>
-  <%= form.submit "Create" %>
+  <%= form.submit (@article.persisted? ? "Update" : "Create") %>
 <% end %>

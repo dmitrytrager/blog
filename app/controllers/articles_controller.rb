@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    @atricle.update_attributes(article_params)
+    @article.update_attributes(article_params)
 
     flash[:notice] = "Article was updated"
     redirect_to article_path(@article)
