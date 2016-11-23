@@ -1,3 +1,16 @@
-<h2><%= @article.title %></h2>
+<h1><%= @article.title %></h1>
 
 <p><%= @article.body %></p>
+
+<h2>Comments</h2>
+
+<% @article.comments.each do |comment| %>
+	<p><%= comment.text %></p>
+	<p><%= time_ago_words comment.created_at %> ago</p>
+<% end %>
+
+<%= form_for @article,  url: {action: "create"} do |f| %>
+	<p><%= f.text_area :title, size: "40x10" %></p>
+	<p><%= f.submit "Article comment" %>
+<% end %>		
+
