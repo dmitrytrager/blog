@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
   helper_method :my_sum
   before_action :check_login
-
+  before_action :authenticate_user!, only: [:update, :destroy, :edit]
+  
   def index
     @articles = Article.all.order(created_at: :desc)
 
@@ -29,7 +30,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = User.first.articles.new(article_params)
+    @article = current_user.articles.new(article_params)
     if @article.save
       flash[:notice] = "Article was created"
       redirect_to article_path(@article)
