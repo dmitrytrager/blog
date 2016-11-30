@@ -1,5 +1,7 @@
 <h3>
   <%= link_to article.title, article_path(article) %>
-  <%= link_to "(edit)", edit_article_path(article) %>
-  <%= link_to 'x', article_path(article), method: :delete %>
-</h3>
+  <% if current_user == article.user %>
+  		<%= link_to "Edit", edit_article_path(article) %>
+  		<%= link_to 'x', article_path(article), method: :delete %>
+  <% end %>
+ </h3>
