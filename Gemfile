@@ -49,6 +49,19 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
   gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "faker"
+end
+
+group :test do
+  gem "capybara"
+  gem "capybara-webkit"
+  gem "database_cleaner"
+  gem "email_spec"
+  gem "launchy"
+  gem "rspec-its"
+  gem "shoulda-matchers"
+  gem "webmock", require: false
 end
 
 group :development do
