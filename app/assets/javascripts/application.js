@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require current_user
+//= require link_stuff
 //= require_tree .
 
 $(document).foundation()

@@ -1,5 +1,6 @@
 <h3>
-  <%= link_to article.title, article_path(article) %>
+  <%= link_to article.title, article_path(article), class: "title-link"
+   %>
   <%= link_to "(edit)", edit_article_path(article) %>
   <%= link_to 'x', article_path(article), data: { confirm: "Are you sure?" }, method: :delete %>
 </h3>
